@@ -3,14 +3,10 @@
  */
 var pathToDir = './filesToRead';
 
-var fs = require('fs');
-var path = require('path');
-
-fs.readdir(pathToDir, function (err, list) {
-   if (err) return console.error(err);
-    for (var i in list) {
-        if (path.extname(list[i]) === '.txt') {
-            console.log(list[i]);
-        }
+var mod = require('./readFiles');
+mod.readFiles(pathToDir, '.txt', function (err, files) {
+    if(err) return console.log(err);
+    for (var i = 0; i < files.length; i++) {
+        console.log(files[i]);
     }
 });
