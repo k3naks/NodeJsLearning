@@ -3,7 +3,7 @@
  */
 var pathToDir = './filesToRead';
 
-var mod = require('./readFiles');
+var mod = require('./../readFiles/index');
 mod.readFiles(pathToDir, '.txt', function (err, files) {
     if(err) return console.log(err);
     for (var i = 0; i < files.length; i++) {
