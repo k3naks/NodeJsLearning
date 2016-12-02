@@ -3,5 +3,5 @@
  */
 
 
-var apiServer = require('./../apiJsonServer/index');
+var apiServer = require('./apiJsonServer/index');
 apiServer(8081);
